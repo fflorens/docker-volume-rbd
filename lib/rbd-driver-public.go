@@ -4,7 +4,7 @@ import (
 	"github.com/Sirupsen/logrus"
 	"github.com/ceph/go-ceph/rados"
 	"github.com/ceph/go-ceph/rbd"
-	"github.com/wetopi/docker-volume-rbd/lib/try"
+	"github.com/fflorens/docker-volume-rbd/lib/try"
 	"sync"
 	"path/filepath"
 	"fmt"

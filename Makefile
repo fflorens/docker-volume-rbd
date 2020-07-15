@@ -1,4 +1,4 @@
-PLUGIN_NAME=wetopi/rbd
+PLUGIN_NAME=kracq/rbd
 PLUGIN_VERSION=3.0.0
 
 all: clean rootfs create

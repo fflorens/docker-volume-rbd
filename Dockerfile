@@ -1,6 +1,7 @@
 FROM ubuntu:18.04 as base
 
 MAINTAINER Joan Vega <joan@wetopi.com>
+MAINTAINER Florian Florensa <florian@florensa.me>
 
 ENV GO_VERSION 1.14
 ENV CEPH_VERSION nautilus
@@ -28,10 +29,10 @@ ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
 ENV PATH /usr/lib/go-$GO_VERSION/bin:$PATH
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
 
-COPY Gopkg.* main.go /go/src/github.com/wetopi/docker-volume-rbd/
-COPY lib /go/src/github.com/wetopi/docker-volume-rbd/lib
+COPY Gopkg.* main.go /go/src/github.com/fflorens/docker-volume-rbd/
+COPY lib /go/src/github.com/fflorens/docker-volume-rbd/lib
 
-WORKDIR /go/src/github.com/wetopi/docker-volume-rbd
+WORKDIR /go/src/github.com/fflorens/docker-volume-rbd
 
 RUN set -ex && go get -u github.com/golang/dep/cmd/dep \
     && dep ensure \
